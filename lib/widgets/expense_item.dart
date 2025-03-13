@@ -17,11 +17,7 @@ class ExpenseItem extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(
-                  categoryIcons[expense.category],
-                  size: 24,
-                  color: const Color.fromARGB(255, 92, 4, 110),
-                ),
+                Icon(categoryIcons[expense.category], size: 24),
                 const SizedBox(width: 10),
                 Text(
                   expense.title,
@@ -35,18 +31,18 @@ class ExpenseItem extends StatelessWidget {
             const SizedBox(height: 5),
             Text(
               '\$${expense.amount.toStringAsFixed(2)}',
-              style: const TextStyle(fontSize: 16, color: Colors.black),
+              style: const TextStyle(fontSize: 16),
             ),
 
             const SizedBox(height: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const Icon(Icons.calendar_month, size: 16, color: Colors.grey),
+                const Icon(Icons.calendar_month, size: 16),
                 const SizedBox(width: 5),
                 Text(
                   expense.formattedDate,
-                  style: const TextStyle(fontSize: 14, color: Colors.grey),
+                  style: const TextStyle(fontSize: 14),
                 ),
               ],
             ),

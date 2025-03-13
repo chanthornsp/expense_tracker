@@ -1,5 +1,6 @@
 import 'package:expense_tracker/data/expense_data.dart';
 import 'package:expense_tracker/models/expense.dart';
+import 'package:expense_tracker/widgets/chart/chart.dart';
 import 'package:expense_tracker/widgets/expense_form.dart';
 import 'package:expense_tracker/widgets/expenses_list.dart';
 import 'package:flutter/material.dart';
@@ -101,6 +102,8 @@ class _HomeState extends State<HomeScreen> {
           children: [
             const SizedBox(height: 16),
             const Text('Expenses', style: TextStyle(fontSize: 28)),
+            const SizedBox(height: 20),
+            Chart(expenses: expenses),
             const SizedBox(height: 20),
             Expanded(child: mainContent),
           ],
